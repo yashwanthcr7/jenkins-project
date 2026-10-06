@@ -26,6 +26,15 @@ pipeline {
             }
         }
 
+        stage('yash') {
+            steps {
+                sh '''
+                cat sample
+                '''
+            }
+        }
+
+        
         stage('Deploy') {
             steps {
                 echo "Deploying application..."
